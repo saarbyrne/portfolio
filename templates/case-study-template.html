@@ -1,0 +1,394 @@
+<!--
+  CASE STUDY TEMPLATE
+
+  Purpose: Use this template to create professional case studies for client/work projects
+
+  Instructions:
+  1. Replace all [placeholder] text with actual content
+  2. Update data attributes in hero section (line 37-40)
+  3. Replace placeholder images with actual assets
+  4. Update Figma prototype links (lines 172, 218, 264)
+  5. Adjust gallery data-gallery attribute to match project name
+  6. Update page title and meta description (lines 6-7)
+
+  Sections included:
+  - Hero with title, caption, and tags
+  - Overview (problem statement and key points)
+  - Discovery (research approach and key learnings)
+  - Design (iterative rounds with feedback)
+  - Outcomes (impact and next steps)
+  - Related content (auto-populated)
+-->
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>[Case Study Title] – Case Study – Saar Byrne</title>
+  <meta name="description" content="[Case study description for SEO]">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../src/style.css">
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="../node_modules/glightbox/dist/css/glightbox.min.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+  <!-- Hero loader -->
+  <script type="module" src="/src/hero-loader.js"></script>
+  <!-- Related content loader -->
+  <script type="module" src="/src/related-content.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== CASE STUDY HERO SECTION ========== -->
+    <div id="case-study-hero"
+         data-title="[Title]"
+         data-caption="Case Study"
+         data-tags='["[Role]", "[Company / Client]"]'>
+    </div>
+    <!-- ========== END CASE STUDY HERO SECTION ========== -->
+
+    <!-- ========== OVERVIEW TEXT SECTION ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="content-container pt-6 lg:pt-10 pb-12">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Overview</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              [1–2 sentences describing the core problem and desired outcome for this project.]
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              [Short intro paragraph explaining what this case study highlights.]
+            </p>
+            <ul class="space-y-2 text-gray-800">
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Point 1 about what you're showcasing]</span>
+              </li>
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Point 2 about user/business needs]</span>
+              </li>
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Point 3 about product/design constraints]</span>
+              </li>
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Point 4 about success criteria or outcomes]</span>
+              </li>
+            </ul>
+            <p class="text-body-lg text-gray-800">
+              [Paragraph describing the engagement, scope, and stakeholders. Mention the industry or league, any partnership decisions, and how generalised vs. bespoke needs were balanced.]
+            </p>
+            <p class="text-body-lg text-gray-800">
+              [Paragraph describing the product philosophy, how customisation was handled, and how decisions were made to serve both a flagship client and a wider user base.]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END OVERVIEW TEXT SECTION ========== -->
+
+    <!-- ========== DISCOVERY TEXT SECTION ========== -->
+    <div class="bg-white">
+      <div class="content-container pt-6 lg:pt-10 pb-12">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Discovery</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">[Describe the research approach, participants, and research formats (onsites, interviews, focus groups, testing).]</p>
+            <h3>Key Learnings</h3>
+            <ol class="space-y-4 text-gray-800">
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">1</span>
+                <span class="text-body-lg"><strong class="text-gray-800">[Learning 1 title]</strong> [Brief detail supporting this learning.]</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">2</span>
+                <span class="text-body-lg"><strong class="text-gray-800">[Learning 2 title]</strong> [Brief detail supporting this learning.]</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">3</span>
+                <span class="text-body-lg"><strong class="text-gray-800">[Learning 3 title]</strong> [Brief detail supporting this learning.]</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">4</span>
+                <span class="text-body-lg"><strong class="text-gray-800">[Learning 4 title]</strong> [Brief detail supporting this learning.]</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">5</span>
+                <span class="text-body-lg"><strong class="text-gray-800">[Learning 5 title]</strong> [Brief detail supporting this learning.]</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DISCOVERY TEXT SECTION ========== -->
+
+    <!-- ========== DISCOVERY IMAGE SECTION (EXAMPLE) ========== -->
+    <div class="bg-gray-50">
+      <div class="content-container py-10 lg:py-14">
+          <figure>
+            <a href="https://placehold.co/1200x800?text=Journey+Map" class="glightbox block" data-glightbox="description: 'Journey map placeholder';" data-gallery="[case-study]-gallery">
+              <img class="w-full mb-8 object-cover rounded-xl" src="https://placehold.co/1200x800?text=Journey+Map" alt="Journey map placeholder">
+            </a>
+          </figure>
+          <figure>
+            <a href="https://placehold.co/1200x800?text=Persona" class="glightbox block" data-glightbox="description: 'Persona placeholder';" data-gallery="[case-study]-gallery">
+              <img class="w-full object-cover rounded-xl" src="https://placehold.co/1200x800?text=Persona" alt="Persona placeholder">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DISCOVERY IMAGE SECTION ========== -->
+
+    <!-- ========== DESIGN ROUND 1 TEXT SECTION ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="content-container pt-6 lg:pt-10 pb-12">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Design</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">[Explain why a staged approach was needed and how early prototypes were validated.]</p>
+            <h3>Round 1 Concept</h3>
+            <p class="text-body-lg text-gray-800">
+              [Describe the first concept, who it was reviewed with, and what it aimed to prove.]
+            </p>
+            <p class="text-body-lg font-bold text-gray-800">Feedback</p>
+            <ul class="space-y-2 text-gray-800">
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Positive reaction or insight]</span>
+              </li>
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Concern or limitation that led to the next round]</span>
+              </li>
+            </ul>
+            <a href="https://www.figma.com/file/[figma-prototype-1]" target="_blank" class="mt-4 inline-flex items-center gap-x-2 text-sm font-medium text-brand hover:opacity-80">
+              View Figma prototype
+              <i class="ph-bold ph-arrow-square-out size-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DESIGN ROUND 1 TEXT SECTION ========== -->
+
+    <!-- ========== DESIGN ROUND 1 IMAGE SECTION ========== -->
+    <div class="bg-gray-50">
+      <div class="content-container py-10 lg:py-14">
+          <figure>
+            <a href="https://placehold.co/1200x800?text=Design+Round+1" class="glightbox block" data-glightbox="description: 'Design round 1 placeholder';" data-gallery="[case-study]-gallery">
+              <img class="w-full object-cover rounded-xl" src="https://placehold.co/1200x800?text=Design+Round+1" alt="Design round 1 placeholder">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DESIGN ROUND 1 IMAGE SECTION ========== -->
+
+    <!-- ========== DESIGN ROUND 2 TEXT SECTION ========== -->
+    <div class="bg-white">
+      <div class="content-container pt-6 lg:pt-10 pb-12">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h3>Round 2</h3>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              [Summarise how feedback from round 1 shifted the focus and what was tested next.]
+            </p>
+            <p class="text-body-lg font-bold text-gray-800">Feedback</p>
+            <ul class="space-y-2 text-gray-800">
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Key improvement that resonated]</span>
+              </li>
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Remaining concern that drove another iteration]</span>
+              </li>
+            </ul>
+            <a href="https://www.figma.com/file/[figma-prototype-2]" target="_blank" class="mt-4 inline-flex items-center gap-x-2 text-sm font-medium text-brand hover:opacity-80">
+              View Figma prototype
+              <i class="ph-bold ph-arrow-square-out size-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DESIGN ROUND 2 TEXT SECTION ========== -->
+
+    <!-- ========== DESIGN ROUND 2 IMAGE SECTION ========== -->
+    <div class="bg-gray-50">
+      <div class="content-container py-10 lg:py-14">
+          <figure>
+            <a href="https://placehold.co/1200x800?text=Design+Round+2" class="glightbox block" data-glightbox="description: 'Design round 2 placeholder';" data-gallery="[case-study]-gallery">
+              <img class="w-full object-cover rounded-xl" src="https://placehold.co/1200x800?text=Design+Round+2" alt="Design round 2 placeholder">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DESIGN ROUND 2 IMAGE SECTION ========== -->
+
+    <!-- ========== DESIGN ROUND 3 TEXT SECTION ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="content-container pt-6 lg:pt-10 pb-12">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h3>Round 3</h3>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              [Describe the final iteration, where it was shared, and how broad feedback influenced the polish.]
+            </p>
+            <p class="text-body-lg font-bold text-gray-800">Feedback</p>
+            <ul class="space-y-2 text-gray-800">
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Key positive reaction or validation]</span>
+              </li>
+              <li class="flex gap-x-2">
+                <i class="ph-bold ph-dot shrink-0 mt-1 size-4 text-brand"></i>
+                <span class="text-body-lg">[Final notes that shaped build scope]</span>
+              </li>
+            </ul>
+            <a href="https://www.figma.com/file/[figma-prototype-3]" target="_blank" class="mt-4 inline-flex items-center gap-x-2 text-sm font-medium text-brand hover:opacity-80">
+              View Figma prototype
+              <i class="ph-bold ph-arrow-square-out size-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DESIGN ROUND 3 TEXT SECTION ========== -->
+
+    <!-- ========== DESIGN ROUND 3 IMAGE SECTION ========== -->
+    <div class="bg-gray-50">
+      <div class="content-container py-10 lg:py-14">
+          <figure>
+            <a href="https://placehold.co/1200x800?text=Design+Round+3" class="glightbox block" data-glightbox="description: 'Design round 3 placeholder';" data-gallery="[case-study]-gallery">
+              <img class="w-full object-cover rounded-xl" src="https://placehold.co/1200x800?text=Design+Round+3" alt="Design round 3 placeholder">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END DESIGN ROUND 3 IMAGE SECTION ========== -->
+
+    <!-- ========== OUTCOMES SECTION ========== -->
+    <div class="bg-white">
+      <div class="content-container pt-6 lg:pt-10 pb-12">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Outcomes</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              [Summarise impact, adoption, and qualitative feedback. Mention how often it is referenced or used by customers.]
+            </p>
+            <p class="text-body-lg text-gray-800">
+              [Describe how the release influenced roadmap/backlog and how it integrates with adjacent surfaces (e.g., calendar, mobile app).]
+            </p>
+            <p class="text-body-lg text-gray-800">
+              [Close with a forward-looking note about capitalising on momentum and next bets.]
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END OUTCOMES SECTION ========== -->
+    <!-- ========== RELATED CONTENT ========== -->
+    <div id="related-content"></div>
+    <!-- ========== END RELATED CONTENT ========== -->
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+
+  <!-- GLightbox JS -->
+  <script src="../node_modules/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Initialize GLightbox -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize GLightbox
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        keyboardNavigation: true,
+        closeButton: true,
+        closeOnOutsideClick: true,
+        autoplayVideos: false
+      });
+
+      // Replace default SVG icons with Phosphor Icons after initialization
+      function replaceIconsWithPhosphor() {
+        // Replace close button icon
+        const closeBtn = document.querySelector('.gclose');
+        if (closeBtn) {
+          closeBtn.innerHTML = '<i class="ph ph-x size-5"></i>';
+        }
+
+        // Replace prev button icon
+        const prevBtn = document.querySelector('.gprev');
+        if (prevBtn) {
+          prevBtn.innerHTML = '<i class="ph ph-arrow-left size-5"></i>';
+        }
+
+        // Replace next button icon
+        const nextBtn = document.querySelector('.gnext');
+        if (nextBtn) {
+          nextBtn.innerHTML = '<i class="ph ph-arrow-right size-5"></i>';
+        }
+      }
+
+      // Replace icons when lightbox opens
+      lightbox.on('open', function() {
+        setTimeout(replaceIconsWithPhosphor, 10);
+      });
+
+      // Also replace on slide change
+      lightbox.on('slide_changed', function() {
+        setTimeout(replaceIconsWithPhosphor, 10);
+      });
+    });
+  </script>
+</body>
+</html>

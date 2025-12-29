@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Maths Helper – Saar Byrne</title>
+  <meta name="description" content="AI Maths Helper">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/style.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+  <!-- Related content loader -->
+  <script type="module" src="/src/related-content.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== BLOG ARTICLE: Center Aligned in Small Size ========== -->
+    <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+      <div class="max-w-2xl">
+        <!-- Article Header -->
+        <div class="space-y-6 md:space-y-8">
+          <div class="space-y-4">
+            <h1>
+              AI Maths Helper
+            </h1>
+          </div>
+
+          
+        </div>
+
+        <!-- Article Content -->
+        <div class="space-y-6 md:space-y-8 mt-8">
+          <p class="text-body-lg text-gray-800">GitHub: [coming soon]<br>AI Co‑pilot: ChatGPT</p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h3 >Why We Built It</h3>
+
+<p class="text-body-lg text-gray-800">A friend of mine teaches maths for the Leaving Cert in Ireland. We were chatting about how students often revise on their own, stuck on a topic, without a way to get help beyond the textbook or YouTube. I had some time and curiosity, and he had the teaching experience. So we decided to try building something small.</p>
+
+<p class="text-body-lg text-gray-800">The idea was simple:</p>
+
+<p class="text-body-lg text-gray-800">A web app with structured maths lessons is an going project. This is still in Beta and being testing and used by a few students. What this post is about is the <strong>AI helper</strong> so that students could ask, “Can you explain this again?”</p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h3 >What We Made</h3>
+
+<p class="text-body-lg text-gray-800">We built a very early version that:</p>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>Lists maths topics for 4th, 5th, and 6th year (Leaving Cert).</li>
+
+<li>Lets users read through basic lesson content.</li>
+
+<li>Includes a little <strong>AI chat box</strong> where students can ask a question and get a step-by-step explanation using GPT-4.</li>
+</ul>
+
+<p class="text-body-lg text-gray-800">We kept it really minimal—just enough to test the idea and get some feedback.</p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h3 >How We Built It</h3>
+
+<p class="text-body-lg text-gray-800"><strong>Frontend:</strong></p>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>React Native with Tailwind (we’re still figuring this part out).</li>
+</ul>
+
+<p class="text-body-lg text-gray-800"><strong>AI Integration:</strong></p>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>OpenAI’s GPT-4 API.</li>
+
+<li>The prompt is basic for now, but we tell the model to respond like a maths teacher explaining to a student in Ireland.</li>
+</ul>
+
+<p class="text-body-lg text-gray-800"><strong>Backend:</strong></p>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>Just Supabase for now—handling auth and user data.</li>
+</ul>
+
+<p class="text-body-lg text-gray-800"><strong>Process:</strong><br>I used <strong>ChatGPT throughout</strong> to help with:</p>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>API integration</li>
+
+<li>Tailwind layouts</li>
+
+<li>Writing prompts for the AI</li>
+
+<li>Debugging issues with our first few attempts</li>
+</ul>
+
+<p class="text-body-lg text-gray-800">I also leaned on guides and tutorials from OpenAI’s docs, Supabase examples, and a few StackOverflow posts.</p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h3 >Problems We Ran Into</h3>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>Prompting was harder than I expected.</strong> At first the AI gave too much or too little info. I spent a while tweaking the instructions.</li>
+
+<li><strong>Designing for students felt risky.</strong> We didn’t want to overwhelm them—or mislead them if the AI got something wrong.</li>
+
+<li><strong>We didn’t know if anyone would even use it.</strong> This was a big one. We didn’t build analytics yet, so right now it’s mostly gut feeling and peer feedback.</li>
+
+<li><strong>Cost worries.</strong> The OpenAI API is powerful but can get expensive. We’ll need a smarter way to manage usage if more students start using it.</li>
+</ul>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h3 >What I Learned</h3>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>It’s okay to launch something incomplete.</strong> I usually polish forever. This time, we got the basics working and just tried it.</li>
+
+<li><strong>AI can help you code even if you’re not an expert.</strong> I didn’t know how to hook up the API when we started. Now I do.</li>
+
+<li><strong>Building with a teacher is underrated.</strong> The clarity of “this is what students actually need” helped focus the whole thing.</li>
+
+<li><strong>Small tools matter.</strong> Even a basic AI chat window can shift how someone learns.</li>
+</ul>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h3 >What’s Next</h3>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>Add more topics</li>
+
+<li>Clean up the design</li>
+
+<li>Let teachers upload their own questions or lessons</li>
+
+<li>Possibly open it up for more students in the next term</li>
+</ul>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<p class="text-body-lg text-gray-800"></p>
+
+        </div>
+        <!-- End Article Content -->
+
+        </div>
+    </div>
+    <!-- ========== END BLOG ARTICLE ========== -->    <!-- ========== RELATED CONTENT ========== -->
+    <div id="related-content"></div>
+    <!-- ========== END RELATED CONTENT ========== -->
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+</body>
+</html>

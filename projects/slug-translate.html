@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Slug Translate: My Weekend Hack from Pain Point to Chrome Extension – Saar Byrne</title>
+  <meta name="description" content="Slug Translate: My Weekend Hack from Pain Point to Chrome Extension">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/style.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+  <!-- Related content loader -->
+  <script type="module" src="/src/related-content.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== BLOG ARTICLE: Center Aligned in Small Size ========== -->
+    <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+      <div class="max-w-2xl">
+        <!-- Article Header -->
+        <div class="space-y-6 md:space-y-8">
+          <div class="space-y-4">
+            <h1>
+              Slug Translate Chrome Extension
+            </h1>
+          </div>
+
+          
+        </div>
+
+        <!-- Article Content -->
+        <div class="space-y-6 md:space-y-8 mt-8">
+          <p class="text-body-lg text-gray-800"><strong>GitHub:</strong> <a class="" href="https://github.com/saarbyrne/slugtranslate">https://github.com/saarbyrne/slugtranslate</a><br><strong>AI Co‑pilot:</strong> Guided by ChatGPT</p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<figure><img class="w-full object-cover rounded-xl" src="/src/assets/blog/slug-translate-1.png" alt="" class="wp-image-536"/></figure>
+
+<h2 >Why I Built It</h2>
+
+<p class="text-body-lg text-gray-800">Late one Friday I was hopping between English and Spanish tabs—copy‑pasting to Google Translate felt tedious. I sketched a quick idea: highlight text, click a “T,” see a translation right there. With almost zero prior extension experience, I teamed up with <strong>ChatGPT</strong> to fill in the gaps, and by Sunday evening <strong>Slug&nbsp;Translate</strong> was up and running.</p>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h2 >How It Works</h2>
+
+<figure><img class="w-full object-cover rounded-xl" src="/src/assets/blog/slug-translate-2.png" alt="" class="wp-image-540" style="width:318px;height:auto"/></figure>
+
+<ol class="list-decimal list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>Highlight text</strong> on any page.</li>
+
+<li>A little <strong>“T”</strong> button pops up at the end of your selection.</li>
+
+<li><strong>Click</strong> it or press <strong>Option +A</strong>—the overlay appears and <strong>auto‑translates</strong> your text.</li>
+
+<li>Toggle <strong>EN→ES</strong> or <strong>ES→EN</strong>, press <strong>Option +D</strong> to re‑translate, or <strong>Escape</strong> to close.</li>
+
+<li><strong>Insert</strong> the translated text back, inline, with one more click.</li>
+</ol>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h2 >Building It</h2>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>Tooling</strong>: Vite + TypeScript for quick builds, Preact for a minimal overlay UI, Manifest V3 for Chrome.</li>
+
+<li><strong>AI assistance</strong>: I leaned on ChatGPT prompts to craft the content script logic, CSS isolation techniques, and even permission scoping for the Chrome Web Store.</li>
+
+<li><strong>Content script</strong>:<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>Listens for <code>selectionchange</code>, injects the “T” button.</li>
+
+<li>Uses <code>mousedown</code> to capture the highlight before it collapses.</li>
+
+<li>Registers Option +A in capture phase to handle keyboard shortcuts reliably.</li>
+</ul>
+</li>
+
+<li><strong>Overlay component</strong>:<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>Manages original vs. translated text, language toggle, and auto‑translate on mount.</li>
+
+<li>Supports Option +D to re‑trigger translation, Escape to close.</li>
+</ul>
+</li>
+</ul>
+
+<h3 >API Choices</h3>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>DeepL prototype</strong>: hit free‑tier limits and odd emoji errors.</li>
+
+<li><strong>LibreTranslate public</strong>: occasional downtime and emoji placeholders.</li>
+
+<li><strong>MyMemory API</strong>: switched to this free, no‑key endpoint for stable text‑only translations.</li>
+</ul>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h2 >Challenges &amp; Lessons</h2>
+
+<ol class="list-decimal list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>Selection loss</strong>: clicking collapsed the highlight. Fix: switch from <code>click</code> to <code>mousedown</code> and store the original <code>Selection</code>.</li>
+
+<li><strong>Dark‑mode collisions</strong>: some sites’ CSS made my UI invisible. Fix: scoped all styles under <code>#translate-overlay</code> with <code>!important</code> to enforce white backgrounds and black text.</li>
+
+<li><strong>Broad permissions</strong>: Web Store flags <code>&lt;all_urls></code>. Fix: dropped unnecessary <code>host_permissions</code>, kept only <code>https://api.mymemory.translated.net/*</code>, and let content scripts inject via <code>content_scripts.matches</code>.</li>
+
+<li><strong>AI as teammate</strong>: ChatGPT helped me iterate through code snippets, debug edge cases, and even structure the manifest for faster review.</li>
+</ol>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<h2 >Publishing &amp; Beyond</h2>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li><strong>Packaging</strong>: <code>npm run build</code> → zip <code>dist/</code> (no extra folders) → upload to Chrome Web Store.</li>
+
+<li><strong>Listing</strong>: added icons, screenshots, banner, concise description, privacy policy link.</li>
+
+<li><strong>Review</strong>: passed Chrome’s least‑privilege checks in under an hour.</li>
+</ul>
+
+<p class="text-body-lg text-gray-800"><strong>Next Steps</strong></p>
+
+<ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800"><li>Let users self‑host LibreTranslate via custom endpoint.</li>
+
+<li>Add more languages.</li>
+
+<li>Explore on‑device ML with TensorFlow.js for offline translation.</li>
+</ul>
+
+<hr class="wp-block-separator has-alpha-channel-opacity"/>
+
+<p class="text-body-lg text-gray-800">Slug&nbsp;Translate now lives in my Chrome toolbar, powered by AI and built by a designer who isn’t afraid to code. Check out the repo and let me know what you think!</p>
+
+        </div>
+        <!-- End Article Content -->
+
+        </div>
+    </div>
+    <!-- ========== END BLOG ARTICLE ========== -->    <!-- ========== RELATED CONTENT ========== -->
+    <div id="related-content"></div>
+    <!-- ========== END RELATED CONTENT ========== -->
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+</body>
+</html>

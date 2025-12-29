@@ -1,0 +1,32 @@
+[
+  {
+    "id": 17,
+    "name": "Communication",
+    "slug": "communication"
+  },
+  {
+    "id": 18,
+    "name": "Design Management",
+    "slug": "design-management"
+  },
+  {
+    "id": 16,
+    "name": "Design Teams",
+    "slug": "design-teams"
+  },
+  {
+    "id": 15,
+    "name": "Leading Teams",
+    "slug": "leading-teams"
+  },
+  {
+    "id": 21,
+    "name": "Resource",
+    "slug": "resource"
+  },
+  {
+    "id": 20,
+    "name": "User Research",
+    "slug": "user-research"
+  }
+]

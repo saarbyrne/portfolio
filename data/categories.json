@@ -1,0 +1,26 @@
+[
+  {
+    "id": 25,
+    "name": "Experiment",
+    "slug": "experiment",
+    "description": ""
+  },
+  {
+    "id": 23,
+    "name": "Idea",
+    "slug": "design-ideas",
+    "description": "These are ideas I have had based on observations and needs."
+  },
+  {
+    "id": 19,
+    "name": "Mangement",
+    "slug": "mangement",
+    "description": ""
+  },
+  {
+    "id": 1,
+    "name": "Opinion",
+    "slug": "opinion",
+    "description": ""
+  }
+]

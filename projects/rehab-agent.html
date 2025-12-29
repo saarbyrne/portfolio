@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Agent Based Rehab Plan – Case Study – Saar Byrne</title>
+  <meta name="description" content="Building an AI-powered rehabilitation tracking system that combines Garmin data with agentic analysis for personalized training recommendations.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="../src/style.css">
+
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="../node_modules/glightbox/dist/css/glightbox.min.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+  <!-- Hero loader -->
+  <script type="module" src="/src/hero-loader.js"></script>
+  <!-- Related content loader -->
+  <script type="module" src="/src/related-content.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== CASE STUDY HERO SECTION ========== -->
+    <div id="case-study-hero"
+         data-title="Agent Based Rehab Plan"
+         data-caption="Case Study"
+         data-tags='["Designer & Builder", "Personal Project"]'>
+    </div>
+    <!-- ========== END CASE STUDY HERO SECTION ========== -->
+
+    <!-- ========== WHY I BUILT THIS SECTION ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <!-- Header -->
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Why I Built This</h2>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              After Achilles surgery, I needed to track my rehab carefully. My Garmin watch was collecting loads of data, but it was stuck in the Garmin Connect app. I built an agentic system that runs automatically, understands my situation, and gives me useful recommendations.
+            </p>
+
+            <p class="text-sm text-gray-600">
+              <strong>WARNING:</strong> Messy UI. AI generated styled slop.
+              <a href="https://github.com/saarbyrne/garmin-grafana" target="_blank" class="inline-flex items-center gap-x-2 text-sm font-medium text-brand hover:opacity-80">
+                View GitHub Repository
+                <i class="ph-bold ph-arrow-square-out size-4"></i>
+              </a>
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              As a designer, not an engineer, this became a systems design challenge. I needed to figure out how to connect Garmin's API, a time-series database, workflow automation, and an AI model. The technical complexity was real, but I approached it by thinking through the user flow, understanding what I wanted out of each component, and figuring out how to put the blocks together using AI coding tools like Claude and Cursor.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              After Achilles surgery, I needed to track my rehab carefully. My Garmin watch was collecting loads of data, heart rate variability, sleep quality, stress levels, body battery, all of it, but it was stuck in the Garmin Connect app – which is basically shit. I could see today's numbers, maybe this week's, but I couldn't see patterns. I couldn't tell if I was overdoing it or if I had room to push harder.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              I found an existing open source project that pulled Garmin data into Grafana dashboards, a useful foundation, but it was just visualisation. I wanted to turn it into something agentic: a system that could run automatically, understand my situation, and give me useful recommendations. So I forked the repo and built on top of it, adding workflow automation and AI to generate training plans that balanced what the numbers said with how I actually felt.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END WHY I BUILT THIS SECTION ========== -->
+
+    <!-- ========== HOW IT WORKS SECTION ========== -->
+    <!-- Text Section -->
+    <div class="bg-white">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <!-- Header -->
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>How It Works</h2>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              I built this by connecting five different systems. At the base, there's a Docker stack that runs continuously, pulling data from Garmin Connect every five minutes using OAuth. That data goes into InfluxDB—a time-series database that's built for handling streams of timestamped data like fitness metrics. Grafana sits on top, turning all that raw data into dashboards that show patterns over weeks and months: sleep heatmaps, heart rate zones, activity timelines with GPS tracks, stress trends.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              The intelligence part uses n8n, a workflow automation tool. Every Sunday at 9 AM, it wakes up and queries InfluxDB for the past week's data: activities with GPS, sleep stages, daily summaries, stress, body battery, heart rate variability. It also pulls in subjective feedback I log through a simple web interface—how tired I felt, how sore, any notes about injuries or how training actually went, separate from what the numbers said.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              All of that gets sent to Claude Sonnet 4.5. I designed the prompt to act like a rehab specialist, it knows to balance objective metrics with how I actually felt, to prioritise injury reports and fatigue signals even when the biometric data looks good. Claude analyses the patterns, figures out training load distribution, assesses recovery, and spits out a plan for the next week that accounts for both the data and my experience.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              I realised the biometric data wasn't enough. I needed a way to capture how I actually felt. So I designed a simple web interface with sliders for energy, fatigue, soreness, motivation, plus text fields for training notes and injury reports. Using Cursor and Claude, I put together a Flask app that writes directly to the same InfluxDB database, so subjective and objective data live in the same timeline.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Image Section (2 images stacked) -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6">
+            <figure>
+              <a href="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.29.30.png" class="glightbox" data-glightbox="description: 'n8n workflow automation showing the weekly data compilation and AI analysis trigger';" data-gallery="rehab-agent-gallery">
+                <img class="w-full object-cover rounded-xl" src="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.29.30.png" alt="n8n workflow automation">
+              </a>
+            </figure>
+
+            <figure>
+              <a href="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.24.21.png" class="glightbox" data-glightbox="description: 'Training feedback form showing soreness level, stress level, motivation, sleep quality, and notes fields';" data-gallery="rehab-agent-gallery">
+                <img class="w-full object-cover rounded-xl" src="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.24.21.png" alt="Training feedback form interface">
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END HOW IT WORKS SECTION ========== -->
+
+    <!-- ========== AI ANALYSIS SECTION ========== -->
+    <!-- Text Section -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <!-- Header -->
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Why Email</h2>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              I choose email as the delivery method for pure convenience and for fun. I could have built a dashboard or an app, but email removes friction. The plan shows up in my inbox every Sunday morning as a clean HTML email. I can read it on my phone. I also got to learn how to connect different systems to create a bigger system, a full workflow. One of the issues in work is the lack of scope, the constant descoping of work. I wanted a bit more here, because I was in charge.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2-Column Grid of AI Output Screenshots -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <figure>
+              <a href="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.20.21.png" class="glightbox" data-glightbox="description: 'Recovery analysis showing sleep quality assessment, sleep architecture insights, and body battery trends';" data-gallery="rehab-agent-gallery">
+                <img class="w-full object-cover rounded-xl" src="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.20.21.png" alt="Recovery analysis from AI">
+              </a>
+            </figure>
+
+            <figure>
+              <a href="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.20.29.png" class="glightbox" data-glightbox="description: 'Key insights including areas of attention, strengths to maintain, and performance predictors';" data-gallery="rehab-agent-gallery">
+                <img class="w-full object-cover rounded-xl" src="../src/assets/rehab-agent/Screenshot-2025-12-07-at-13.20.29.png" alt="Key insights and performance predictors">
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END AI ANALYSIS SECTION ========== -->
+
+    <!-- ========== TECHNICAL CHALLENGE SECTION ========== -->
+    <div class="bg-white">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <!-- Header -->
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>The Technical Challenge</h2>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              The hard part wasn't any single piece, it was getting systems that weren't designed to talk to each other to actually communicate. Garmin's API uses OAuth 2.0 with session tokens that expire after about a year, so the system needed token management. The data comes in different formats: JSON for summaries, FIT files for detailed activity data (which need parsing), XML for some wellness endpoints. Each type needs different transformation before it hits InfluxDB.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              The n8n workflow has over a dozen nodes doing different things: calculating date ranges, formatting HTTP requests with auth headers, parsing responses, merging data streams, building prompts with dynamic variables, handling errors, rendering HTML emails. It has to handle missing data, API rate limits, network failures, bad responses, all without breaking the chain. All of this can be partially done with AI, the coding portion and the guidance, but you still, as a human, have to stitch it all together.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              The Claude integration required the most thinking. I had to design the prompt so it understands the rehab context, respects constraints, and produces output that can be reliably parsed. The prompt needs to be specific enough to get useful output, but flexible enough that the AI can use judgment based on the mix of objective and subjective data.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END TECHNICAL CHALLENGE SECTION ========== -->
+
+    <!-- ========== REFLECTION SECTION ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <!-- Header -->
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Reflection</h2>
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              You can build complex technical systems without deep coding knowledge. The barrier to entry is much lower now with AI coding tools. By understanding how existing tools talk to each other, Docker, InfluxDB, Grafana, n8n, Claude and thinking through the user flow and what I wanted from each component, I designed and developed and end to end flow. I just planned and worked with a good AI model initially, Sonnet 4.5, and found the right tools for each point, figured out how to connect them. The result is more robust and maintainable than an app would be. Each piece can be updated independently, I can customise Grafana without touching data collection, modify the n8n workflow to add data sources, refine the AI prompt to improve recommendations.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              Everything's on GitHub as a fork of the original Grafana project: code, configs, documentation. It's a complete system others can deploy, understand, and extend.
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              <a href="https://github.com/saarbyrne/garmin-grafana" target="_blank" class="inline-flex items-center gap-x-2 text-sm font-medium text-brand hover:opacity-80">
+                View GitHub Repository
+                <i class="ph-bold ph-arrow-square-out size-4"></i>
+              </a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END REFLECTION SECTION ========== -->
+    <!-- ========== RELATED CONTENT ========== -->
+    <div id="related-content"></div>
+    <!-- ========== END RELATED CONTENT ========== -->
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+
+  <!-- GLightbox JS -->
+  <script src="../node_modules/glightbox/dist/js/glightbox.min.js"></script>
+
+  <!-- Initialize GLightbox -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize GLightbox
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        keyboardNavigation: true,
+        closeButton: true,
+        closeOnOutsideClick: true,
+        autoplayVideos: false
+      });
+
+      // Replace default SVG icons with Phosphor Icons after initialization
+      function replaceIconsWithPhosphor() {
+        // Replace close button icon
+        const closeBtn = document.querySelector('.gclose');
+        if (closeBtn) {
+          closeBtn.innerHTML = '<i class="ph ph-x size-5"></i>';
+        }
+
+        // Replace prev button icon
+        const prevBtn = document.querySelector('.gprev');
+        if (prevBtn) {
+          prevBtn.innerHTML = '<i class="ph ph-arrow-left size-5"></i>';
+        }
+
+        // Replace next button icon
+        const nextBtn = document.querySelector('.gnext');
+        if (nextBtn) {
+          nextBtn.innerHTML = '<i class="ph ph-arrow-right size-5"></i>';
+        }
+      }
+
+      // Replace icons when lightbox opens
+      lightbox.on('open', function() {
+        setTimeout(replaceIconsWithPhosphor, 10);
+      });
+
+      // Also replace on slide change
+      lightbox.on('slide_changed', function() {
+        setTimeout(replaceIconsWithPhosphor, 10);
+      });
+    });
+  </script>
+</body>
+</html>

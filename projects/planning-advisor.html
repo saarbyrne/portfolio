@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Planning Advisor – Case Study – Saar Byrne</title>
+  <meta name="description" content="AI-Powered Training Periodisation: Building an end-to-end flow for performance coaches to generate detailed, periodised training plans.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="../src/style.css">
+  
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="../node_modules/glightbox/dist/css/glightbox.min.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+  <!-- Hero loader -->
+  <script type="module" src="/src/hero-loader.js"></script>
+  <!-- Related content loader -->
+  <script type="module" src="/src/related-content.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== CASE STUDY HERO SECTION ========== -->
+    <div id="case-study-hero"
+         data-title="Planning Advisor"
+         data-caption="Case Study"
+         data-tags='["Experiment", "Kitman Labs", "AI Prototyping"]'>
+    </div>
+    <!-- ========== END CASE STUDY HERO SECTION ========== -->
+
+    <!-- ========== THE CHALLENGE TEXT ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>The Challenge</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              For a Hackathon, I wanted to create an end to end flow for performance coaches to create detailed, periodised training plans. Performance coaches at elite sports teams face a problem creating detailed, periodised training plans due to time pressures. I wanted to automate that using AI.
+            </p>
+
+            <p class="text-sm text-gray-600">
+              <a href="https://planning-advisor.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-brand hover:opacity-80">Prototype Link</a> (I have killed the link to supabase and the API for Gemini, it was costing too many tokens)
+            </p>
+
+            <p class="text-body-lg text-gray-800">
+              Performance coaches at elite sports teams face a problem creating a detailed, periodised training plan that accounts for the complexity of modern football. You have fixtures to consider, player load to manage, principles of play to emphasise, game models, and the balance of preparation and recovery. Most sports scientists and coaches spend hours manually constructing these plans, balancing competing priorities with limited time and incomplete information.
+            </p>
+            <p class="text-body-lg text-gray-800">
+              During Kitman Labs' hackathon day, I wanted to solve this by creating an end to end flow where a performance coach could input their objectives and have a detailed, intelligent plan generated automatically. A complete periodised plan that an AI creates based on the actual data of the club and the specific aims of the coach.
+            </p>
+            <p class="text-body-lg text-gray-800">
+              I also wanted to learn how to create tool that utilises AI. The hackathon format would force quick, focused decision making and expose what actually mattered versus what I assumed would matter. My experience with AI coding tools is as good as anyones, so this challenge was doable.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END THE CHALLENGE TEXT ========== -->
+
+    <!-- ========== THE CHALLENGE IMAGES ========== -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.01.54-2048x1030.png" class="glightbox block" data-glightbox="description: 'Planning Advisor interface';" data-gallery="planning-advisor-gallery">
+              <img class="w-full mb-8 object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.01.54-2048x1030.png" alt="Planning Advisor interface">
+            </a>
+          </figure>
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.31-2048x1014.png" class="glightbox block" data-glightbox="description: 'Planning Advisor periodisation view';" data-gallery="planning-advisor-final-gallery">
+              <img class="w-full object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.31-2048x1014.png" alt="Planning Advisor periodisation view">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END THE CHALLENGE IMAGES ========== -->
+
+    <!-- ========== THE APPROACH IMAGES ========== -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-17.07.30-1-1536x836.png" class="glightbox block" data-glightbox="description: 'Planning Advisor dashboard';" data-gallery="planning-advisor-gallery">
+              <img class="w-full mb-8 object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-17.07.30-1-1536x836.png" alt="Planning Advisor dashboard">
+            </a>
+          </figure>
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.42-1536x693.png" class="glightbox block" data-glightbox="description: 'Dashboard tracking output breakdown';" data-gallery="planning-advisor-gallery">
+              <img class="w-full object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.42-1536x693.png" alt="Dashboard tracking output breakdown">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END THE APPROACH IMAGES ========== -->
+
+    <!-- ========== THE APPROACH TEXT ========== -->
+    <div class="bg-white">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>The Approach</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              My aim was to get an end to end, using our design system (a version of MUI) and I wanted to emphasise the technical side of things. I knew having a clean UI was not going to happen. So I parked the idea of perfection. I approached this as a design problem first, then a technical one.
+            </p>
+            <p class="text-body-lg text-gray-800">
+              The core insight was that plan generation needed to happen in two distinct layers. First, an AI agent analyses fixtures, objectives, and focus principles to create a periodised timeline, assigning load classifications and mesocycle phases that respect the science of periodisation. Second, the system populates each session with appropriate drills from an enriched library, ensuring variety while maintaining alignment with the coach's selected principles of play. This was near end of day when I realised this. That, what I needed was actually an 'agent' which works through a set of steps in the background, not just a general AI model.
+            </p>
+            <p class="text-body-lg text-gray-800">
+              The initial interface didnt include any major inputs, just a date range, adjust focus sliders that must total 100%, and select up to seven principles of play from attacking, defending, and transition categories. Behind the scenes, the system loads fixtures from Supabase, analyses the timeline, and generates periodisation that looks at both load management and tactical preparation The technical AI implementation uses Google's Gemini model (we use this in Kitman Labs) with a two step generation process.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END THE APPROACH TEXT ========== -->
+
+    <!-- ========== FEEDBACK CHECKPOINT INTRO ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Feedback Checkpoint</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">After building the prototype, I presented it to internal ex-practitioners and product managers at Kitman Labs. Feedback came in 2 forms, the output quality was poor, so the plans weren't usable in practice, and secondly, the users wanted more input up front.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END FEEDBACK CHECKPOINT INTRO ========== -->
+
+    <!-- ========== FEEDBACK ISSUES IDENTIFIED ========== -->
+    <div class="bg-white">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h3>Issues Identified</h3>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <ol class="space-y-4 text-gray-800">
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">1</span>
+                <span class="text-body-lg"><strong class="text-gray-800">The model was too general.</strong> It wasn't truly agentic. Instead of reasoning through periodisation science and making contextual decisions, it applied generic thinking patterns.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">2</span>
+                <span class="text-body-lg"><strong class="text-gray-800">Quality degraded over time.</strong> The longer the time horizon for the periodisation plan, the poorer the prescription became further into the future. Plans that started with reasonable load distribution degraded into nonsensical patterns as the AI lost coherence over extended timelines.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">3</span>
+                <span class="text-body-lg"><strong class="text-gray-800">Lack of coherence in output.</strong> Many of the prescribed exercises and loads were duplicated. The AI didn't want to expend energy, so it lazily output as much duplication as possible rather than creating variety.</span>
+              </li>
+              <li class="flex gap-x-3">
+                <span class="numbered-badge">4</span>
+                <span class="text-body-lg"><strong class="text-gray-800">No state awareness.</strong> Sessions that should have been distinct felt repetitive. The system wasn't learning from what it had already generated, it was treating each session independently without maintaining awareness of the overall plan structure.</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END FEEDBACK ISSUES IDENTIFIED ========== -->
+
+    <!-- ========== FEEDBACK CHECKPOINT IMAGE ========== -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.03.18-1536x1166.png" class="glightbox block" data-glightbox="description: 'Dashboard tracking output breakdown';" data-gallery="planning-advisor-gallery">
+              <img class="w-full object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.03.18-1536x1166.png" alt="Dashboard tracking output breakdown">
+            </a>
+            <figcaption class="mt-4 text-sm text-gray-500">I added a dashboard to track the output breakdown, so I could have a birds eye view of what was being produced and audit it.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END FEEDBACK CHECKPOINT IMAGE ========== -->
+
+    <!-- ========== ITERATING ON FEEDBACK TEXT ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>Iterating on Feedback</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              The initial feedback revealed another critical issue: users wanted more control over the plan generation process. The internal feedback suggested that more input at the initial portion of the prompt to create the periodisation plan was necessary. Users wanted more determination over the plan, not leaving it totally up to the AI. This may have been due to the poor quality output though. I wonder if they would have cared if the output was excellent?
+            </p>
+            <p class="text-body-lg text-gray-800">
+              This was a design problem, not just a technical one. I had optimised for automation, the AI would take the inputs and generate everything. But coaches didn't want to cede that much control. They wanted to guide the periodisation strategy, not just set objectives and hope the AI got it right.
+            </p>
+            <p class="text-body-lg text-gray-800">
+              In response, I added an initial input modal that allowed coaches to provide more detailed guidance before the AI generated the periodisation plan. This gave users more determination over the plan structure while still leveraging AI for the heavy lifting of drill selection and session construction. The modal captured additional context about training philosophy, preferred load patterns, and specific constraints that the AI could then incorporate into its periodisation reasoning.
+            </p>
+            <p class="text-body-lg text-gray-800">
+              This iteration taught me that even when building AI-powered tools, users need to feel in control. The AI should augment decision making, not replace it entirely. The initial input modal became a bridge between human expertise and AI capability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END ITERATING ON FEEDBACK TEXT ========== -->
+
+    <!-- ========== ITERATING ON FEEDBACK IMAGES ========== -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot 2025-12-24 at 08.35.03.png" class="glightbox block" data-glightbox="description: 'Planning Advisor periodisation view';" data-gallery="planning-advisor-final-gallery">
+              <img class="w-full mb-8 object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot 2025-12-24 at 08.35.03.png" alt="Planning Advisor periodisation view">
+            </a>
+          </figure>
+          <figure>
+            <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.55-1536x795.png" class="glightbox block" data-glightbox="description: 'Planning Advisor periodisation view';" data-gallery="planning-advisor-final-gallery">
+              <img class="w-full object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.55-1536x795.png" alt="Planning Advisor periodisation view">
+            </a>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END ITERATING ON FEEDBACK IMAGES ========== -->
+
+    <!-- ========== FINAL DESIGNS GALLERY INTRO ========== -->
+    <div class="bg-white">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h3>Final Designs Gallery</h3>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              Selected screens from the Planning Advisor prototype, showcasing the interface, dashboard, and periodisation planning flow.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END FINAL DESIGNS GALLERY INTRO ========== -->
+
+    <!-- ========== FINAL DESIGNS GALLERY IMAGES ========== -->
+    <div class="bg-gray-50">
+      <div class="max-w-3xl px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2">
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.01.54-2048x1030.png" class="glightbox block" data-glightbox="description: 'Planning Advisor interface';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.01.54-2048x1030.png" alt="Planning Advisor interface">
+              </a>
+            </figure>
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-17.07.30-1-1536x836.png" class="glightbox block" data-glightbox="description: 'Planning Advisor dashboard';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-17.07.30-1-1536x836.png" alt="Planning Advisor dashboard">
+              </a>
+            </figure>
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.42-1536x693.png" class="glightbox block" data-glightbox="description: 'Dashboard tracking output breakdown';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.42-1536x693.png" alt="Dashboard tracking output breakdown">
+              </a>
+            </figure>
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.55-1536x795.png" class="glightbox block" data-glightbox="description: 'Planning Advisor periodisation view';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.55-1536x795.png" alt="Planning Advisor periodisation view">
+              </a>
+            </figure>
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.03.18-1536x1166.png" class="glightbox block" data-glightbox="description: 'Dashboard tracking output breakdown';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.03.18-1536x1166.png" alt="Dashboard tracking output breakdown">
+              </a>
+            </figure>
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot 2025-12-24 at 08.35.03.png" class="glightbox block" data-glightbox="description: 'Planning Advisor periodisation view';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot 2025-12-24 at 08.35.03.png" alt="Planning Advisor periodisation view">
+              </a>
+            </figure>
+            <figure>
+              <a href="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.31-2048x1014.png" class="glightbox block" data-glightbox="description: 'Planning Advisor periodisation view';" data-gallery="planning-advisor-final-gallery">
+                <img class="w-full h-auto object-cover rounded-xl" src="../src/assets/planning-advisor/Screenshot-2025-12-07-at-21.02.31-2048x1014.png" alt="Planning Advisor periodisation view">
+              </a>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END FINAL DESIGNS GALLERY IMAGES ========== -->
+
+    <!-- ========== WHAT I LEARNED INTRO ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>What I Learned</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">This failure taught me several critical lessons about building AI-powered tools.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END WHAT I LEARNED INTRO ========== -->
+
+    <!-- ========== WHAT I LEARNED CARDS ========== -->
+    <div class="bg-white">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
+            <div class="flex gap-x-3">
+              <span class="numbered-badge">1</span>
+              <div class="space-y-1">
+                <p class="text-body-lg text-gray-800 font-bold">AI generation vs reasoning</p>
+                <p class="text-body-lg text-gray-800">There's a difference between an AI that generates content and an AI agent that reasons through problems. The model I used could generate text that looked like periodisation, but it wasn't actually reasoning through the science of load management, fixture importance, or tactical progression. It was pattern matching, not problem solving.</p>
+              </div>
+            </div>
+            <div class="flex gap-x-3">
+              <span class="numbered-badge">2</span>
+              <div class="space-y-1">
+                <p class="text-body-lg text-gray-800 font-bold">Coherence over time is hard</p>
+                <p class="text-body-lg text-gray-800">Generating a single session is straightforward. Generating a coherent six-week plan where each session builds on previous ones and prepares for future fixtures requires maintaining state and context that the model struggled with. The degradation in quality over longer time horizons exposed this limitation.</p>
+              </div>
+            </div>
+            <div class="flex gap-x-3">
+              <span class="numbered-badge">3</span>
+              <div class="space-y-1">
+                <p class="text-body-lg text-gray-800 font-bold">Optimising for efficiency, not quality</p>
+                <p class="text-body-lg text-gray-800">The model optimised for efficiency, not quality. When generating multiple sessions, it defaulted to duplication rather than variety. This revealed that without explicit constraints and feedback loops, the AI would take the path of least resistance. I needed to build mechanisms that enforced variety and coherence, not just prompt for them.</p>
+              </div>
+            </div>
+            <div class="flex gap-x-3">
+              <span class="numbered-badge">4</span>
+              <div class="space-y-1">
+                <p class="text-body-lg text-gray-800 font-bold">User needs are specific</p>
+                <p class="text-body-lg text-gray-800">User needs are more specific than I understood. Coaches don't just need periodisation, they need periodisation that reflects their specific philosophy, respects their fixture schedule, and maintains coherence across weeks. The generic model couldn't deliver that specificity. It needs a RAG or LoRA, or some augmentation, unless you want to train your own model.</p>
+              </div>
+            </div>
+            <div class="flex gap-x-3">
+              <span class="numbered-badge">5</span>
+              <div class="space-y-1">
+                <p class="text-body-lg text-gray-800 font-bold">Prototype vs product</p>
+                <p class="text-body-lg text-gray-800">A prototype that demonstrates a concept is different from a tool that solves a problem. The Planning Advisor shows what's possible, but it doesn't solve the actual need. To move from prototype to product, I would need to either constrain the problem significantly, use a more sophisticated agentic architecture, or accept that the AI provides suggestions that coaches refine rather than complete plans they execute directly.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END WHAT I LEARNED CARDS ========== -->
+
+    <!-- ========== THE PATH FORWARD SECTION ========== -->
+    <div class="bg-[var(--color-background)]">
+      <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+        <div class="max-w-2xl mx-auto">
+          <div class="space-y-6 md:space-y-8">
+            <div class="space-y-4">
+              <h2>The Path Forward</h2>
+            </div>
+          </div>
+          <div class="space-y-6 md:space-y-8 mt-8">
+            <p class="text-body-lg text-gray-800">
+              This prototype isn't finished, and it's not refined. But it served its purpose: it taught me what doesn't work and why. The next iteration would need agentic reasoning, state management across the planning horizon, explicit variety constraints, and a clearer understanding of where AI assistance adds value versus where a human in the loop is necessary.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END THE PATH FORWARD SECTION ========== -->
+    <!-- ========== RELATED CONTENT ========== -->
+    <div id="related-content"></div>
+    <!-- ========== END RELATED CONTENT ========== -->
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+  
+  <!-- GLightbox JS -->
+  <script src="../node_modules/glightbox/dist/js/glightbox.min.js"></script>
+  
+  <!-- Initialize GLightbox -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize GLightbox
+      const lightbox = GLightbox({
+        selector: '.glightbox',
+        touchNavigation: true,
+        loop: true,
+        keyboardNavigation: true,
+        closeButton: true,
+        closeOnOutsideClick: true,
+        autoplayVideos: false
+      });
+      
+      // Replace default SVG icons with Phosphor Icons after initialization
+      function replaceIconsWithPhosphor() {
+        // Replace close button icon
+        const closeBtn = document.querySelector('.gclose');
+        if (closeBtn) {
+          closeBtn.innerHTML = '<i class="ph ph-x size-5"></i>';
+        }
+        
+        // Replace prev button icon
+        const prevBtn = document.querySelector('.gprev');
+        if (prevBtn) {
+          prevBtn.innerHTML = '<i class="ph ph-arrow-left size-5"></i>';
+        }
+        
+        // Replace next button icon
+        const nextBtn = document.querySelector('.gnext');
+        if (nextBtn) {
+          nextBtn.innerHTML = '<i class="ph ph-arrow-right size-5"></i>';
+        }
+      }
+      
+      // Replace icons when lightbox opens
+      lightbox.on('open', function() {
+        setTimeout(replaceIconsWithPhosphor, 10);
+      });
+      
+      // Also replace on slide change
+      lightbox.on('slide_changed', function() {
+        setTimeout(replaceIconsWithPhosphor, 10);
+      });
+    });
+  </script>
+</body>
+</html>
+

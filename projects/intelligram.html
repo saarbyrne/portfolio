@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intelligram for Instagram – Saar Byrne</title>
+  <meta name="description" content="An iOS app leveraging machine learning to analyze Instagram photos and predict engagement, reaching 50,000+ users and analyzing 3+ million photos.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/style.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+  <!-- Related content loader -->
+  <script type="module" src="/src/related-content.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== BLOG ARTICLE: Center Aligned in Small Size ========== -->
+    <div class="max-w-3xl px-4 pt-6 lg:pt-10 pb-12 sm:px-6 lg:px-8 mx-auto">
+      <div class="max-w-2xl">
+        <!-- Article Header -->
+        <div class="space-y-6 md:space-y-8">
+          <div class="space-y-4">
+            <h1>
+              Intelligram for Instagram
+            </h1>
+
+            <p class="text-body-lg text-gray-800">
+              An iOS app leveraging machine learning to analyze Instagram photos and predict engagement based on image quality patterns. This project reached 50,000+ users and analyzed 3+ million photos, but taught me that technical success doesn't overcome founder misalignment.
+            </p>
+          </div>
+
+          <!-- Featured Image -->
+          <figure>
+            <img class="w-full object-cover rounded-xl" src="/src/assets/2024/02/icon.png" alt="Intelligram app icon">
+            <figcaption class="mt-4 text-sm text-center text-gray-500">
+              Intelligram app icon and branding
+            </figcaption>
+          </figure>
+          <!-- End Featured Image -->
+        </div>
+
+        <!-- Article Content -->
+        <div class="space-y-6 md:space-y-8 mt-8">
+          <p class="text-body-lg text-gray-800">
+            I share this project to highlight a few things: working within constraints of existing ML tools, building features around technical capabilities, achieving real user adoption and value, and learning that technical success doesn't overcome founder misalignment.
+          </p>
+
+          <h2>
+            The Genesis
+          </h2>
+
+          <p class="text-body-lg text-gray-800">
+            Co-founder Aram pitched the concept during lunch, having discovered an ML model capable of analyzing social media photos for technical quality while predicting user engagement. Rather than building our own model, we decided to work within constraints by developing features around this existing tool.
+          </p>
+
+          <p class="text-body-lg text-gray-800">
+            The project involved creating an iOS app leveraging an existing machine learning model trained on social media images. The model could assess image quality and predict engagement likelihood based on patterns from its training data. Using Apple's Core ML for on-device processing meant no server calls were required, ensuring complete privacy. The core function provided real-time image quality analysis with engagement prediction.
+          </p>
+
+          <h2>
+            Technical Approach
+          </h2>
+
+          <ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800">
+            <li><strong>Framework:</strong> Apple's Core ML for on-device processing</li>
+            <li><strong>Privacy:</strong> No server calls required</li>
+            <li><strong>Core Function:</strong> Real-time image quality analysis with engagement prediction</li>
+          </ul>
+
+          <h2>
+            Features We Built
+          </h2>
+
+          <p class="text-body-lg text-gray-800">
+            We developed several features that extended beyond the core ML functionality:
+          </p>
+
+          <ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800">
+            <li>Journey tracking showing improvement over time</li>
+            <li>Anonymous Wall for peer feedback</li>
+            <li>Category-specific predictions (selfies, landscapes, food, animals)</li>
+            <li>One-tap Instagram integration</li>
+          </ul>
+
+          <!-- App Screens -->
+          <figure>
+            <img class="w-full object-cover rounded-xl" src="/src/assets/intelligram/Screenshot-2025-12-07-at-11.10.03.png" alt="Intelligram main analysis screen">
+            <figcaption class="mt-4 text-sm text-center text-gray-500">
+              Main analysis screen showing photo scoring
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img class="w-full object-cover rounded-xl" src="/src/assets/intelligram/Screenshot-2025-12-07-at-11.11.17-1536x846.png" alt="Intelligram category predictions">
+            <figcaption class="mt-4 text-sm text-center text-gray-500">
+              Category-specific predictions interface
+            </figcaption>
+          </figure>
+
+          <h2>
+            Results & Outcomes
+          </h2>
+
+          <p class="text-body-lg text-gray-800">
+            The app reached 50,000+ users and analyzed 3+ million photos. Notable adoption occurred in Colombia and Russia with approximately 25,000 downloads, and users reported engagement improvements.
+          </p>
+
+          <p class="text-body-lg text-gray-800">
+            Aram pursued the project through Dublin Institute of Technology's New Frontiers programme with Enterprise Ireland funding. The co-founder relationship ultimately proved insufficient for sustained collaboration post-funding.
+          </p>
+
+          <blockquote class="text-center p-4 sm:px-7">
+            <p class="text-xl font-medium text-gray-800 md:text-2xl md:leading-normal xl:text-2xl xl:leading-normal">
+              Good idea, real users, genuine value—yet technical capability alone cannot overcome founder misalignment.
+            </p>
+          </blockquote>
+
+          <h2>
+            Key Learnings
+          </h2>
+
+          <p class="text-body-lg text-gray-800">
+            This project taught me several important lessons about product development and startup dynamics:
+          </p>
+
+          <ul class="list-disc list-outside space-y-4 ps-5 text-body-lg text-gray-800">
+            <li><strong>Working within constraints:</strong> We didn't need to build our own ML model. Finding an existing tool and building features around it was faster and more practical.</li>
+            <li><strong>Privacy by design:</strong> Using on-device processing with Core ML meant we could offer complete privacy without server calls, which became a key differentiator.</li>
+            <li><strong>Real user value:</strong> The app achieved genuine adoption with 50,000+ users and meaningful engagement improvements reported by users.</li>
+            <li><strong>Founder alignment matters:</strong> Despite technical success and user adoption, founder misalignment ultimately prevented sustained collaboration. This was perhaps the most important lesson—technical capability alone isn't enough.</li>
+          </ul>
+
+          <h2>
+            Conclusion
+          </h2>
+
+          <p class="text-body-lg text-gray-800">
+            Intelligram demonstrated that you can build meaningful products by working within the constraints of existing tools rather than building everything from scratch. We achieved real user adoption and delivered genuine value. However, the project also highlighted that technical success and user traction aren't sufficient if the founding team isn't aligned on vision, execution, and long-term goals.
+          </p>
+
+          <p class="text-body-lg text-gray-800">
+            The experience reinforced my belief in pragmatic product development—finding the right tools, building features that matter, and ensuring team alignment from the start. Sometimes the most important lessons come from projects that succeed technically but fail organizationally.
+          </p>
+        </div>
+        <!-- End Article Content -->
+      </div>
+    </div>
+    <!-- ========== END BLOG ARTICLE ========== -->
+
+    <!-- ========== RELATED CONTENT ========== -->
+    <div id="related-content"></div>
+    <!-- ========== END RELATED CONTENT ========== -->
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+</body>
+</html>
+

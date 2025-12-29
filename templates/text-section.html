@@ -1,0 +1,28 @@
+<!-- Text Section Partial
+     Reusable single-column text component with header and body text
+     Usage: Include this partial and customize the heading and paragraph content
+     Styling: Matches the about section width, uses cream background, center-aligned
+-->
+<div class="bg-[var(--color-background)]">
+  <div class="content-container pt-6 lg:pt-10 pb-12">
+      <!-- Header -->
+      <div class="space-y-6 md:space-y-8">
+        <div class="space-y-4">
+          <h2>
+            Section Header
+          </h2>
+        </div>
+      </div>
+
+      <!-- Content -->
+      <div class="space-y-6 md:space-y-8 mt-8">
+        <p class="text-body-lg text-gray-800">
+          Your text content goes here. This component uses the text-body-lg class which automatically inherits font family and sizing from the stylesheet. When you update fonts in the stylesheet, this will automatically update.
+        </p>
+
+        <p class="text-body-lg text-gray-800">
+          Add additional paragraphs as needed. Each paragraph will have consistent spacing and typography.
+        </p>
+      </div>
+  </div>
+</div>

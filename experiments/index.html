@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experiments – Saar Byrne</title>
+  <meta name="description" content="Experimental projects, prototypes, and explorations in design and technology.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Phosphor Icons -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/style.css">
+  <!-- Layout loader -->
+  <script type="module" src="/src/layout.js"></script>
+</head>
+<body class="bg-white">
+
+  <!-- ========== HEADER ========== -->
+  <div id="site-header"></div>
+  <!-- ========== END HEADER ========== -->
+
+  <main id="content">
+    <!-- ========== HERO SECTION ========== -->
+    <div class="bg-gray-50">
+      <div class="max-w-2xl mx-auto px-4 xl:px-0 pt-24 lg:pt-32 pb-24">
+        <h1>
+          <span class="text-brand">Experiments</span>
+        </h1>
+        <div class="max-w-2xl mx-auto">
+          <p class="text-body-lg mt-6 mb-6">
+            Experimental projects, prototypes, and explorations in design and technology. A space for trying new ideas and learning through making.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- ========== END HERO SECTION ========== -->
+
+    <!-- ========== EXPERIMENTS LIST ========== -->
+    <div class="max-w-3xl px-4 sm:px-6 lg:px-8 py-12 lg:py-16 mx-auto">
+      <!-- List -->
+      <div class="space-y-6 lg:space-y-8">
+        <!-- Card: Sample Experiment -->
+        <a class="group flex items-start overflow-hidden bg-white rounded-2xl hover:shadow-md transition-shadow duration-300 focus:outline-hidden" href="#">
+          <div class="w-32 sm:w-48 flex-shrink-0 pt-4 md:pt-6">
+            <div class="h-32 sm:h-40 overflow-hidden bg-gray-50 flex items-center justify-center p-3 rounded-xl">
+              <img class="max-w-full max-h-full object-contain" src="/src/assets/noise.png" alt="Sample Experiment">
+            </div>
+          </div>
+          <div class="flex-1 p-4 md:p-6">
+            <span class="block mb-1 text-xs font-semibold uppercase text-brand">
+              Experiment
+            </span>
+            <h3 class="text-xl font-semibold text-gray-800">
+              Sample Experiment
+            </h3>
+            <p class="mt-2 text-gray-600 line-clamp-3">
+              This is a placeholder experiment card. It demonstrates the structure and layout for experimental projects and prototypes.
+            </p>
+          </div>
+        </a>
+        <!-- End Card -->
+
+      </div>
+    </div>
+    <!-- ========== END EXPERIMENTS LIST ========== -->
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <div id="site-footer"></div>
+  <!-- ========== END FOOTER ========== -->
+
+  <!-- Preline JS -->
+  <script src="https://cdn.jsdelivr.net/npm/preline@2.7.0/dist/preline.min.js"></script>
+</body>
+</html>
+

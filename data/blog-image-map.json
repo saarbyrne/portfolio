@@ -1,0 +1,80 @@
+{
+  "design-democracy": {
+    "wordpress": [
+      "https://saarbyrne.com/wp-content/uploads/2025/08/Screenshot-2025-12-07-at-21.49.37-1024x505.png",
+      "https://saarbyrne.com/wp-content/uploads/2025/08/Screenshot-2025-12-09-at-11.56.19-1024x556.png",
+      "https://saarbyrne.com/wp-content/uploads/2025/08/Screenshot-2025-12-09-at-12.37.50-1024x611.png"
+    ],
+    "local": [
+      "/src/assets/blog/design-democracy-1.png",
+      "/src/assets/blog/design-democracy-2.png",
+      "/src/assets/blog/design-democracy-3.png"
+    ]
+  },
+  "ai-maths-helper": {
+    "wordpress": [],
+    "local": [
+      "/src/assets/2024/08/Frame-1@2x.png"
+    ]
+  },
+  "slug-translate": {
+    "wordpress": [
+      "https://saarbyrne.com/wp-content/uploads/2025/04/1280x800-1024x640.png",
+      "https://saarbyrne.com/wp-content/uploads/2025/04/Screenshot-2025-04-20-at-09.40.30.png"
+    ],
+    "local": [
+      "/src/assets/blog/slug-translate-1.png",
+      "/src/assets/blog/slug-translate-2.png"
+    ]
+  },
+  "design-resources": {
+    "wordpress": [
+      "https://saarbyrne.com/wp-content/uploads/2024/02/designops_101-1024x557.png",
+      "https://saarbyrne.com/wp-content/uploads/2024/02/dual_track-1024x451.png",
+      "https://saarbyrne.com/wp-content/uploads/2024/02/nng-service-blueprint-example-1024x879.png"
+    ],
+    "local": [
+      "/src/assets/blog/design-resources-1.png",
+      "/src/assets/blog/design-resources-2.png",
+      "/src/assets/blog/design-resources-3.png"
+    ]
+  },
+  "design-strategy": {
+    "wordpress": [],
+    "local": [
+      "/src/assets/2024/08/Frame-2@2x.png"
+    ]
+  },
+  "design-moats": {
+    "wordpress": [],
+    "local": [
+      "/src/assets/2024/08/Frame-3@2x.png"
+    ]
+  },
+  "business-vessel": {
+    "wordpress": [],
+    "local": [
+      "/src/assets/2024/08/Frame-4@2x.png"
+    ]
+  },
+  "design-philosophy": {
+    "wordpress": [],
+    "local": [
+      "/src/assets/2024/08/Frame-5@2x.png"
+    ]
+  },
+  "value-of-design": {
+    "wordpress": [
+      "https://saarbyrne.com/wp-content/uploads/2024/02/SVGZ-BusValueDesign-ex4a-2020-update-1.png"
+    ],
+    "local": [
+      "/src/assets/blog/value-of-design-1.png"
+    ]
+  },
+  "leading-design-team": {
+    "wordpress": [],
+    "local": [
+      "/src/assets/2024/08/DALL·E-2024-08-11-08.00.56-Create-a-minimalistic-abstract-image-in-the-Bauhaus-style-with-the-theme-of-social-environment.-Use-a-simple-palette-of-primary-colors-red-blue-yel.webp"
+    ]
+  }
+}

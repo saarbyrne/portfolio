@@ -1,0 +1,181 @@
+---
+description: Design system rules for consistent UI across the portfolio site
+globs: ["*.html", "*.css"]
+alwaysApply: true
+---
+
+# Design System Rules
+
+Follow these rules when generating or modifying HTML/CSS for this portfolio.
+
+## Core Principles
+
+- **Less is more** — fewer variations, more consistency
+- **Flat and white** — no shadows, no gradients
+- **Dark text** — gray-800 for all text (not gray-600)
+- **Ample spacing** — generous gaps, especially around text
+- **Light borders** — border-gray-200 only
+- **Consistent radius** — rounded-xl for containers, rounded-full for pills
+
+## Typography
+
+### Font Weights (use only these 3)
+
+- `font-bold` (700) — headings, emphasis
+- `font-medium` (500) — navigation, UI labels
+- Default (400) — body text
+
+**Do NOT use:** `font-semibold`, `font-light`, `font-thin`, `font-black`
+
+### Text Colors
+
+- `text-gray-800` — default for ALL text (headings and body)
+- `text-gray-500` — muted/secondary (captions, dates only)
+- `text-blue-600` — links only
+
+**Do NOT use:** `text-gray-600`, `text-gray-700`, `text-gray-900` for body text
+
+### Headings
+
+Use semantic HTML. CSS handles sizing automatically:
+- `<h1>` — 36px bold
+- `<h2>` — 24px bold  
+- `<h3>` — 20px bold
+
+**Do NOT add** `text-2xl`, `text-3xl`, `font-bold` to headings — they inherit from CSS.
+
+### Body Text Sizes
+
+Two body text sizes available:
+
+- **16px (default):** General body text, multi-column layouts, cards, metadata, UI elements
+- **18px (`.text-body-lg`):** Single full-width columns, article/blog content, long-form reading, case study content
+
+**Usage:**
+- Default 16px applies automatically to all `<p>` tags
+- For larger text in single-column layouts, add `.text-body-lg` class to paragraphs or their container
+- Example: `<p class="text-body-lg">Content for single-column reading</p>`
+
+## Colors
+
+### Backgrounds
+
+Only two options:
+- `bg-white` — default
+- `bg-gray-50` — alternating sections
+
+**Do NOT use:** `bg-gray-100`, `bg-blue-*`, shadows, gradients
+
+### Borders
+
+- Always `border-gray-200`
+- Never darker borders
+
+### Accent Color
+
+- `text-blue-600` / `hover:text-blue-800` — for links only
+- No blue backgrounds or badges
+
+## Spacing
+
+Use ample gaps:
+
+- Section padding: `py-12 lg:py-16` with `px-4 sm:px-6 lg:px-8`
+- Heading to content: `mb-6`
+- Paragraphs: `space-y-5` or `mt-5`
+- Grid gaps: `gap-8 lg:gap-12`
+- Tag groups: `gap-2`
+
+## Border Radius
+
+Only two values:
+- `rounded-xl` — cards, images, containers
+- `rounded-full` — pills, avatars, icon buttons
+
+**Do NOT use:** `rounded-lg`, `rounded-2xl`, `rounded-md`
+
+## Components
+
+**CRITICAL:** Always use documented patterns from `/COMPONENTS.md`. Do not create variations.
+
+### Preline UI Components
+
+Use these exact patterns (see COMPONENTS.md for full details):
+
+- **Header with collapse:** `hs-collapse-toggle` with `data-hs-collapse` attribute
+- **Dropdown menu:** `hs-dropdown`, `hs-dropdown-toggle`, `hs-dropdown-menu` with required attributes
+
+### Standard Patterns
+
+Use these exact class strings:
+
+**Tag:**
+```html
+<span class="py-1.5 px-3 bg-white text-gray-800 border border-gray-200 text-sm rounded-xl">Label</span>
+```
+
+**Project Card:**
+```html
+<a class="group flex flex-col focus:outline-hidden" href="...">
+  <div class="aspect-[4/3] overflow-hidden bg-gray-100 rounded-2xl flex items-center justify-center p-4">
+    <img class="max-w-full max-h-full group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out object-contain rounded-2xl" src="..." alt="...">
+  </div>
+  <div class="pt-4">
+    <h3>Title</h3>
+    <p class="mt-1 text-gray-600">Description</p>
+    <div class="mt-3 flex flex-wrap gap-2"><!-- Tags --></div>
+  </div>
+</a>
+```
+
+**Social Icon Button:**
+```html
+<a class="size-8 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-full border border-transparent text-gray-500 hover:bg-gray-50 focus:outline-none focus:bg-gray-50" href="..." target="_blank" rel="noopener noreferrer">
+  <i class="ph ph-linkedin-logo size-4"></i>
+</a>
+```
+
+**Link with Arrow:**
+```html
+<a class="group inline-flex items-center gap-x-2 text-sm font-medium text-gray-800 hover:text-blue-600 focus:outline-none focus:text-blue-600" href="...">
+  <i class="ph ph-arrow-left size-4 group-hover:-translate-x-1 transition"></i>
+  Link text
+</a>
+```
+
+**Section Container:**
+```html
+<div class="max-w-[85rem] px-4 py-12 sm:px-6 lg:px-8 lg:py-16 mx-auto">
+```
+
+**Figure with Caption:**
+```html
+<figure class="my-8">
+  <img class="w-full object-cover rounded-xl" src="..." alt="...">
+  <figcaption class="mt-3 text-sm text-center text-gray-500">Caption</figcaption>
+</figure>
+```
+
+## Icons
+
+Use Phosphor Icons with `size-4`:
+
+```html
+<i class="ph ph-icon-name size-4"></i>
+```
+
+## What NOT to Do
+
+- ❌ No shadows (`shadow-*`)
+- ❌ No `font-semibold` — use `font-bold` or `font-medium`
+- ❌ No `text-gray-600` — use `text-gray-800`
+- ❌ No colored backgrounds
+- ❌ No inline heading size overrides
+- ❌ No `rounded-lg` or `rounded-2xl` — use `rounded-xl`
+
+## Documentation
+
+- **Design System:** `/DESIGN-SYSTEM.md` - Typography, colors, spacing, design tokens
+- **Components:** `/COMPONENTS.md` - All component patterns (Preline UI and standard patterns)
+
+**Always check COMPONENTS.md before creating any UI element. Use documented patterns exactly.**

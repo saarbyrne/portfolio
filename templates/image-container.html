@@ -1,0 +1,152 @@
+<!-- Image Container Partial
+     Flexible image display component supporting 1-8 columns
+     Usage: Include this partial and customize images, captions, and column count
+     Default: Single column (1 image)
+
+     To change columns, update the grid classes:
+     - 1 column: grid-cols-1 (default, single centered image)
+     - 2 columns: grid grid-cols-1 sm:grid-cols-2
+     - 3 columns: grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3
+     - 4 columns: grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4
+     - 6 columns: grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6
+     - 8 columns: grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8
+-->
+
+<!-- SINGLE IMAGE (Default) -->
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <!-- Single Image -->
+      <figure>
+        <a href="path/to/full-size-image.jpg" class="glightbox" data-glightbox="description: 'Image description here';" data-gallery="image-gallery">
+          <img class="w-full object-cover rounded-xl" src="path/to/image.jpg" alt="Image alt text">
+        </a>
+        <figcaption class="mt-4 text-sm text-center text-gray-500">
+          Image caption goes here
+        </figcaption>
+      </figure>
+    </div>
+  </div>
+</div>
+
+<!-- SINGLE IMAGE (No caption, no lightbox) -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <img class="w-full object-cover rounded-xl" src="path/to/image.jpg" alt="Image alt text">
+    </div>
+  </div>
+</div>
+-->
+
+<!-- TWO COLUMN GRID -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <figure>
+          <a href="path/to/image1.jpg" class="glightbox" data-glightbox="description: 'Image 1 description';" data-gallery="image-gallery">
+            <img class="w-full h-auto object-cover rounded-xl" src="path/to/image1.jpg" alt="Image 1">
+          </a>
+          <figcaption class="mt-4 text-sm text-center text-gray-500">Caption 1</figcaption>
+        </figure>
+
+        <figure>
+          <a href="path/to/image2.jpg" class="glightbox" data-glightbox="description: 'Image 2 description';" data-gallery="image-gallery">
+            <img class="w-full h-auto object-cover rounded-xl" src="path/to/image2.jpg" alt="Image 2">
+          </a>
+          <figcaption class="mt-4 text-sm text-center text-gray-500">Caption 2</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- THREE COLUMN GRID -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+        <figure>
+          <a href="path/to/image1.jpg" class="glightbox" data-glightbox="description: 'Image 1';" data-gallery="image-gallery">
+            <img class="w-full h-auto object-cover rounded-xl" src="path/to/image1.jpg" alt="Image 1">
+          </a>
+          <figcaption class="mt-4 text-sm text-center text-gray-500">Caption 1</figcaption>
+        </figure>
+
+        <figure>
+          <a href="path/to/image2.jpg" class="glightbox" data-glightbox="description: 'Image 2';" data-gallery="image-gallery">
+            <img class="w-full h-auto object-cover rounded-xl" src="path/to/image2.jpg" alt="Image 2">
+          </a>
+          <figcaption class="mt-4 text-sm text-center text-gray-500">Caption 2</figcaption>
+        </figure>
+
+        <figure>
+          <a href="path/to/image3.jpg" class="glightbox" data-glightbox="description: 'Image 3';" data-gallery="image-gallery">
+            <img class="w-full h-auto object-cover rounded-xl" src="path/to/image3.jpg" alt="Image 3">
+          </a>
+          <figcaption class="mt-4 text-sm text-center text-gray-500">Caption 3</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- FOUR COLUMN GRID -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+        <!-- Add 4 figure elements here -->
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- SIX COLUMN GRID -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+        <!-- Add 6+ figure elements here -->
+        <!-- Use gap-2 for tighter spacing with more columns -->
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- EIGHT COLUMN GRID -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-8 gap-2">
+        <!-- Add 8+ figure elements here -->
+        <!-- Use gap-2 for tighter spacing with more columns -->
+      </div>
+    </div>
+  </div>
+</div>
+-->
+
+<!-- SIMPLE GRID WITHOUT CAPTIONS (Cleaner for many images) -->
+<!--
+<div class="bg-gray-50">
+  <div class="content-container py-10 lg:py-14">
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-2">
+        <a href="path/to/image1.jpg" class="glightbox block" data-glightbox="description: 'Image 1';" data-gallery="image-gallery">
+          <img class="w-full h-auto object-contain rounded-xl" src="path/to/image1.jpg" alt="Image 1">
+        </a>
+
+        <a href="path/to/image2.jpg" class="glightbox block" data-glightbox="description: 'Image 2';" data-gallery="image-gallery">
+          <img class="w-full h-auto object-contain rounded-xl" src="path/to/image2.jpg" alt="Image 2">
+        </a>
+
+        <!-- Add more images as needed -->
+      </div>
+    </div>
+  </div>
+</div>
+-->
