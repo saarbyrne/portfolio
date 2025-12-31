@@ -1,0 +1,124 @@
+	.wrapper{ width:100%;}
+	.wrapper-inline{ position:relative; float:left; width:100%;}
+	
+    .container12,  {
+		margin:0 auto;
+		padding:0;
+		position:relative;
+		width:740px;
+		}
+	
+	.row {margin-bottom:20px;}
+	
+	 .column12{
+		display:inline;
+		float:left;
+		padding-left:0px;
+		padding-right:0px;
+	}
+	.container12 {margin-left:0; margin-right:0;}
+	.column1 {width:650px; text-align:left; margin-left:auto; margin-right:auto;}
+	.container12 .column1 p{ font-size:22px; line-height:33px;}
+	.container12 .column1 h1{ font-size:42px; line-height:33px; padding: 15px 30px 15px 0px;}
+	.container12 .column1 h3{ font-size:32px; line-height:33px; margin-bottom: 20px; padding-left:0px; padding-right:30px;}
+	.container12 .column4 {width:50%; margin-left:auto; margin-right:auto;}
+	.container12 .column12 {width:100%;}
+	
+	
+
+@media only screen and (min-width: 620px) and (max-width: 959px) {
+		
+	.mob-remove{display:none;}
+	ul.nav a li { padding-left:4px;  padding-right:4px; font-weight:800; font-size:13px; letter-spacing:0px;  }
+	
+	.column1 {width:600px;text-align:left; margin-left:auto; margin-right:auto;}
+	.container12 .column1 p{ font-size:16px; line-height:24px; padding-left:10px; padding-right:10px;}
+	.container12 .column1 h1, .container12 .column1 h3{ padding: 15px 30px 15px 15px;}
+}
+
+	 
+
+@media only screen and (max-width: 620px) {
+     .container12,  {width:300px;}
+	.container12 .column1 {width:100%;text-align:left; margin-left:auto; margin-right:auto;}
+	.container12 .column1 p{ font-size:16px; line-height:24px; padding-left:15px; padding-right:15px;}
+	.container12 .column1 h1, .container12 .column1 h3{ padding: 15px 30px 15px 15px;}
+     
+	.container12 .column4,  .column4,
+     .container12 .column12,  .column12{
+        margin: 0px 0 0px 0;
+        width:100%;
+    }
+    
+     .small-mob-remove{display:none;}
+     ul.fancy-nav{display:none;}
+     ul.nav{display:none;}
+	.panorama .info{display:none;}
+	
+    .column-intro{
+		   z-index:990;  
+		   width: 250px;
+		   height: 150px;
+		   position: absolute;
+		   left: 50%;
+		   top: 28%; 
+		   margin-left: -125px;
+		   margin-top: -75px;
+	}
+    
+     .column-blog{
+		   z-index:990;  
+		   width: 200px;
+		   height: 140px;
+		   position: absolute;
+		   left: 50%;
+		   top: 50%; 
+		   margin-left: -100px;
+		   margin-top: -70px;
+	}
+	.column-blog a{text-decoration:none; font-size:20px; line-height:28px; font-weight:100;}
+	.column-blog h1{font-size: 25px; line-height: 35px; padding: 0px 0px 10px 0px;}
+	.column-blog h3{font-size:18px; line-height:25px; font-weight:100; padding: 0px 0px 10px 0px; font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;}
+	.column-blog h6{font-size: 15px; line-height: 23px; padding: 0px 0px 10px 0px;}
+	.column-blog p{color:#222; font-size:15px; line-height:22px; font-weight:100;}
+    
+    .row {margin:0;}
+	
+}
+
+
+
+/* #Clearing
+================================================== */
+
+    /* Self Clearing Goodness */
+    .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
+
+    /* Use clearfix class on parent to clear nested columns,
+    or wrap each row of columns in a <div class="row"> */
+    .clearfix:before,
+    .clearfix:after,
+    .row:before,
+    .row:after {
+      content: '\0020';
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0; }
+    .row:after,
+    .clearfix:after {
+      clear: both; }
+    .row,
+    .clearfix {
+      zoom: 1; }
+
+    /* You can also use a <br class="clear" /> to clear columns */
+    .clear {
+      clear: both;
+      display: block;
+      overflow: hidden;
+      visibility: hidden;
+      width: 0;
+      height: 0;
+    }

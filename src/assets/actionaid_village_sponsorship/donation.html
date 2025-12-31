@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Donate</title>
+        <meta name="keywords" content="">
+        <meta name="author" content="Saar Byrne">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="target-densitydpi=device-dpi, width=device-width" />
+        
+             <link rel="shortcut icon" href="images/Icons/favicon.ico">
+             <link rel="stylesheet" href="js/libs/panorama360/panorama360.css" media="all"/>
+             <link rel="stylesheet" href="css/main.css"/>
+                    
+            
+            <style type="text/css">
+                html { 
+                      background: url(images/Blog/Village.jpg) no-repeat center center fixed; 
+                      -webkit-background-size: cover;
+                      -moz-background-size: cover;
+                      -o-background-size: cover;
+                      background-size: cover;
+                    }
+            </style>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+               <script>window.jQuery || document.write('<script src="js/libs/jquery.min.js"><\/script>')</script>
+                
+			 <script>
+                      $(function(){
+						
+						$( '#cbp-fwslider' ).cbpFWSlider();	
+						
+                              $('.opaque').css('opacity', '0');
+                              
+                              $("#mobile-nav-button").click(function() {
+                                $("#mobile-nav-hider").slideToggle("slow");
+                              });
+                              $(".close").click(function() {
+                                $("#mobile-nav-hider").slideToggle("slow");
+                              });
+                              $(".fancybox").click(function() {
+                                $("#mobile-nav-hider").hide("slow");
+                              });
+                              if ($(this).width() < 620) {
+                                             $(".menu").show();
+                                        }
+                         });	
+					           
+					$(document).ready(function() {
+					    $("#submit_btn").click(function() { 
+						  
+						    var proceed = true;
+						   //simple validation at client's end
+						   //loop through each field and we simply change border color to red for invalid fields		
+							$("#contact_form input[required=true], #contact_form textarea[required=true]").each(function(){
+								$(this).css('border-color',''); 
+								if(!$.trim($(this).val())){ //if this field is empty 
+									$(this).css('border-color','red'); //change border color to red   
+									proceed = false; //set do not proceed flag
+								}
+								//check invalid email
+								var email_reg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/; 
+								if($(this).attr("type")=="email" && !email_reg.test($.trim($(this).val()))){
+									$(this).css('border-color','red'); //change border color to red   
+									proceed = false; //set do not proceed flag				
+								}	
+							});
+						  
+						   if(proceed) //everything looks good! proceed...
+						   {
+								//get input field values data to be sent to server
+							  post_data = {
+									'user_name'		: $('input[name=name]').val(), 
+									'user_email'	: $('input[name=email]').val(), 
+									'phone_number'	: $('input[name=phone2]').val(), 
+									'subject'		: $('select[name=subject]').val(), 
+									'msg'			: $('textarea[name=message]').val()
+								};
+							  
+							  //Ajax post data to server
+							  $.post('mail.php', post_data, function(response){  
+									if(response.type == 'error'){ //load json data from server and output message     
+										output = '<div class="error">'+response.text+'</div>';
+									}else{
+									    output = '<div class="success">'+response.text+'</div>';
+										//reset values in all input fields
+										$("#contact_form  input[required=true], #contact_form textarea[required=true]").val(''); 
+										$("#contact_form #contact_body").slideUp(); //hide form after success
+									}
+									$("#contact_form #contact_results").hide().html(output).slideDown();
+							  }, 'json');
+						   }
+					    });
+					    
+					    //reset previously set border colors and hide all message on .keyup()
+					    $("#contact_form  input[required=true], #contact_form textarea[required=true]").keyup(function() { 
+						   $(this).css('border-color',''); 
+						   $("#result").slideUp();
+					    });
+					});
+			</script>
+			<script>
+			  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+			 
+			  ga('create', 'UA-41894758-4', 'auto');
+			  ga('send', 'pageview');
+			</script>
+
+</head>
+<body> 
+<div class="container12 white">	
+
+	<!---- #Main Nav ---->
+               <div class="small-mob-remove">
+                    <img class="logo-blog" src="images/Icons/AA_Logo.png" alt="ActionAid Logo" />
+                     <ul class="nav-blog">
+                     	<a title="Village Sponsorship" href="index.html"><li><img class="mob-remove home" src="images/Icons/red/home.png" alt="icon" />Amuru Village</li></a>
+                         <a title="Village Updates" href="village-updates.html"><li><img class="mob-remove" src="images/Icons/red/blog.png" alt="icon" />Village Updates</li></a>
+                         <a href="why-sponsor.html"><li><img class="mob-remove" src="images/Icons/sponsor.png" alt="icon" />Sponsor</li></a>
+                         
+                         <ul class="social-media">
+                                     <li><a target="_blank" href="https://twitter.com/Actionaid_Ire" title="facebook actionaid ireland"><img src="images/Icons/twitter.png" alt="twitter actionaid ireland" /></a></li>
+                                     <li><a target="_blank" href="https://www.facebook.com/ActionAidIreland" title="facebook actionaid ireland"><img src="images/Icons/facebook.png" alt="facebook actionaid ireland" /></a></li>
+                     </ul>
+                    </ul>
+              </div>
+              
+                <!---- #Mobile Nav ---->
+                <div class="menu" style="display:none;"><div id="mobile-nav-button">&#9776;</div></div>
+                
+                <div id="mobile-nav-hider" style="display:none;">
+                        <ul class="mobile-nav">
+                        	   <li style="margin-left:40px;"><img class="logo-nav" src="images/Icons/AA_Logo.png" alt="ActionAid Logo" /></li>
+                            	<a title="Village Updates" href="village-updates.html"><li><img class="mob-remove" src="images/Icons/red/blog.png" alt="icon" />Village Updates</li></a>
+                         	<a href="why-sponsor.html"><li><img class="mob-remove" src="images/Icons/sponsor.png" alt="icon" />Sponsor</li></a>
+                         	<a title="Village Sponsorship" href="index.html"><li><img class="mob-remove" src="images/Icons/red/home.png" alt="icon" />Amuru Village</li></a>
+                            <div class="close"><img src="images/Icons/close.png" alt="close button" /></div>
+                        </ul>
+               </div>
+
+     <div class="wrapper">
+        
+          
+          <div class="clear padTopBot"></div>
+          
+            <div class="column4">
+            	<h1>YES, I WOULD LIKE TO BECOME A VILLAGE SPONSOR</h1>
+            	<p>Join us as a Village Sponsor and become a part of a powerful global movement of 400,000 ActionAid sponsors who are bringing about positive changes in the lives of people living in poverty. Your support is urgently needed in Amuru to secure basic amenities in the community that we sometimes take for granted like healthcare, food, water and education.</p>
+            	
+               <h3 class="red">Our Promise to You</h3>
+               
+               <p>Through your generous support ActionAid Ireland has committed to working in Amuru until 2017. We will ensure:</p>
+               
+                    <ul class="fancy-list">
+                         <li>People will have access to basic services such as education, health, sanitation and water in their community</li>
+                         <li>Children will have access to quality education and will be supported to go to school</li>
+                         <li>Community members will have access to medical care in clinics run by trained medical staff and resourced with approved medication</li>
+                         <li>Women will be protected both in and outside the home</li>
+                         <li>Communities will be trained and supported in securing improved public services</li>
+                         <li>Community members will have a direct say in the development of their own communities</li>
+                         <li>Communities can grow and support themselves into the future</li>
+                    </ul>
+                    
+            </div><!--column 4 end-->
+
+
+            
+            <div class="column4">
+            
+                    <div class="form-style" id="contact_form">
+                        <div class="form-style-heading">Donation</div>
+                        <div id="contact_results"></div>
+                        <div id="contact_body">
+                            <label><span>Name <span class="required">*</span></span><br>
+                                <input type="text" name="name" id="name" required="true" class="input-field"/>
+                            </label><br>
+                            <label><span>Email <span class="required">*</span></span><br>
+                                <input type="email" name="email" required="true" class="input-field"/>
+                            </label><br>
+                            <label><span>Phone</span><br>
+                                <input type="text" name="phone2" maxlength="15"  required="true" class="tel-number-field long" />
+                            </label><br>
+                                <label for="subject"><span>Regarding</span><br>
+                                <select name="subject" class="select-field">
+                                <option value="General Question">General Question</option>
+                                <option value="Advertise">Advertisement</option>
+                                <option value="Partnership">Partnership Oppertunity</option>
+                                </select>
+                            </label><br>
+                            <label for="field5"><span>Message <span class="required">*</span></span><br>
+                                <textarea name="message" id="message" class="textarea-field" required="true"></textarea>
+                            </label><br>
+                            <label>
+                                <span>&nbsp;</span><input type="submit" id="submit_btn" value="Submit" />
+                            </label>
+                        </div>
+                    </div> 	
+			
+			</div><!--column 4 end-->
+    		
+    		
+    		<div class="clear padTop2"></div>
+    		
+    		 <div class="column12">
+			 
+			 <h6 class="padleft">Notes:</h6>	 
+    		 <p class="small"><strong>*</strong> By signing up to become a village sponsor you are agreeing to ActionAid's payment terms as below and <a href="why-sponsor.html/data-protection-policy" target="_blank">privacy policy</a>.<br><br>
+               <strong>**</strong>PAYMENT DETAILS - ActionAid, 172 Ivy Excahnge, Granby Place, Dublin 1 Originators identification number - 99 30 68 - PAYMENT INSTRUCTIONS - Please pay ActionAid Direct Debits from the account detailed in this instruction, subject to the safeguards assured by the Direct Debit Guarantee. I understand that this instruction may remain with ActionAid and, if so, details will be passed electronically to my Bank/Building Society. Banks and Building Societies may not accept Direct Debit instructions for some types of account and your Direct Debit can take up to 14 days to set up. It will be claimed on the 7th of the month or the nearest working day. By signing this mandate form, you authorise (A) ActionAid Ireland to send instructions to your bank to debit your account and (B) your bank to debit your account in accordance with the instruction from ActionAid Ireland. As part of your rights, you are entitled to a refund from your bank under the terms and conditions of your agreement with your bank. A refund must be claimed within 8 weeks starting from the date on which your account was debited. Your rights are explained in a statement that you can obtain from your bank.</p>
+            
+
+            </div><!--column 4 end-->
+    		
+    		
+    		
+          <div class="clear padTopBot"></div>
+          
+          <!-- Footer 
+        ================================================== -->
+            
+            	<div class="wrapper">
+                    <footer>
+                    	<div class="column1">
+                       		<address><a href="http://www.actionaid.ie/" target="_blank" title="actionaid ireland"><strong class="red">ActionAid Ireland</strong> Ivy Exchange, 172 Granby Place, Parnell Square, Dublin 1</a></address>
+					</div>
+                     </footer>
+                </div>
+          
+    		
+    </div>
+</div>  
+
+			
+			   
+   
+   
+
+</body>
+</html>

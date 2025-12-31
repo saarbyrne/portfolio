@@ -1,0 +1,63 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+header {
+  text-align: center;
+  background: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+/* Timeline Styles */
+.timeline-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #fff;
+  border-bottom: 2px solid #ddd;
+}
+
+.timeline-item {
+  background: #ddd;
+  border: 2px solid #bbb;
+  padding: 10px 20px;
+  margin: 0 5px;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 5px;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.timeline-item:hover {
+  background: #bbb;
+  transform: scale(1.1);
+}
+
+/* Content Section Styles */
+.content-section {
+  padding: 20px;
+  background-color: #fff;
+  margin: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#dynamic-content img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+#dynamic-content p {
+  font-size: 1.1em;
+  color: #333;
+  margin-bottom: 10px;
+}
